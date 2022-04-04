@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import Form from './Form'
 import './App.css'
+import EditForm from './EditForm'
+import DeleteForm from './DeleteForm'
 
 function App() {
   const [users, setUsers] = useState([])
@@ -32,7 +34,10 @@ function App() {
       <h1>Random Users</h1>
       <Form userId={1} />
       <br />
+      <EditForm/>
       <br />
+      <DeleteForm/>
+      <br/>
       {hasError ? <p>{errorMessage}</p> : null}
       {!isLoading ? (
         <ul>
